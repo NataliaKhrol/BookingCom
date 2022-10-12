@@ -29,6 +29,7 @@ public class SearchSteps {
     @Given("user is on the search page")
     public void userIsOnTheSearchPage() {
 
+
         driver.get("https://www.booking.com/searchresults.ru.html");
     }
 
