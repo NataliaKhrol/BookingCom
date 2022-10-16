@@ -12,11 +12,11 @@ public class BasePage {
     WebDriver driver;
     WebDriverWait wait;
 
-    public final static String BASE_URL = "https://www.booking.com/searchresults.ru.html";
+    public final static String BASE_URL = "https://www.booking.com";
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-     //   wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver, (20));
     }
 
     public void setUp() {
