@@ -7,5 +7,5 @@ Feature: Search on booking.com
     And hotel rating is <rating>
 Examples:
     |city|hotel|rating|
-    |"Dubai"|"Flora Al Barsha Hotel At The Mall"|"8.0"|
+    |"Dubai"|"Flora Al Barsha Hotel At The Mall"|"8.2"|
     |"Minsk"|"Another hotel name"|"9.0"|

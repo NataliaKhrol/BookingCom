@@ -52,12 +52,12 @@ public class SearchSteps {
     @Then("hotel name is {string}")
     public void hotelNameIs(String expectedHotelName) {
      //   String actualHotelName = driver.findElement(By.cssSelector("[data-testid=title]")).getText();
-        assertEquals(searchPage.searchResult(), expectedHotelName, "");
+        assertEquals(searchPage.searchResult(), expectedHotelName, "Something went wrong");
     }
 
     @And("hotel rating is {string}")
-    public void hotelRatingIs(String arg0) {
-        assertEquals(resultPage.getRating(), expectedHotelRating, "Hotel name is incorrect");
+    public void hotelRatingIs(String expectedRating) {
+        assertEquals(resultPage.getRating(), expectedRating, "Something went wrong");
     }
 
     @After

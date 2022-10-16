@@ -4,4 +4,4 @@ Feature: Search on booking.com
     Given user is on the search page
     When user searches for "Dubai"
     Then hotel name is "Flora Al Barsha Hotel At The Mall"
-    And hotel rating is "8.0"
+    And hotel rating is "8.2"
