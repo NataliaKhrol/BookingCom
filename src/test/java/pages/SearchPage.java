@@ -24,8 +24,6 @@ public class SearchPage extends BasePage {
     }
 
     public String searchResult() {
-      return driver.findElement(HOTEL_BUTTON).getText();
+        return driver.findElement(HOTEL_BUTTON).getText();
     }
-
-
-    }
+}

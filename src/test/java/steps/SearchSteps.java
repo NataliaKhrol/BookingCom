@@ -39,19 +39,15 @@ public class SearchSteps {
     public void userIsOnTheSearchPage() {
         searchPage.open();
 
-        //     driver.get("https://www.booking.com/searchresults.ru.html");
     }
 
     @When("user searches for {string}")
     public void userSearchesFor(String city) {
-        //driver.findElement(By.cssSelector("[name=ss]")).sendKeys(city);
-      //  driver.findElement(By.cssSelector("[type=submit]")).click();
         searchPage.searchForHotel(city);
     }
 
     @Then("hotel name is {string}")
     public void hotelNameIs(String expectedHotelName) {
-     //   String actualHotelName = driver.findElement(By.cssSelector("[data-testid=title]")).getText();
         assertEquals(searchPage.searchResult(), expectedHotelName, "Something went wrong");
     }
 
