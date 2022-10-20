@@ -10,6 +10,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasePage;
 import pages.ResultPage;
 import pages.SearchPage;
@@ -20,6 +21,7 @@ import static org.testng.Assert.assertEquals;
 
 public class SearchSteps {
     WebDriver driver;
+   // WebDriverWait wait;
     BasePage basePage;
     SearchPage searchPage;
     ResultPage resultPage;
@@ -28,6 +30,7 @@ public class SearchSteps {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+      //  wait = new WebDriverWait(driver, (20));
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize(); //открывает браузер в полном окне
         basePage = new BasePage(driver);
@@ -48,12 +51,12 @@ public class SearchSteps {
 
     @Then("hotel name is {string}")
     public void hotelNameIs(String expectedHotelName) {
-        assertEquals(searchPage.searchResult(), expectedHotelName, "Something went wrong");
+        assertEquals(searchPage.searchResult(), expectedHotelName, "Hotel names do not match");
     }
 
     @And("hotel rating is {string}")
     public void hotelRatingIs(String expectedRating) {
-        assertEquals(resultPage.getRating(), expectedRating, "Something went wrong");
+        assertEquals(resultPage.getRating(), expectedRating, "The rating is incorrect");
     }
 
     @After

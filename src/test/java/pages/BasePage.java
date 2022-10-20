@@ -9,20 +9,12 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class BasePage {
-    WebDriver driver;
-    WebDriverWait wait;
+   WebDriver driver;
 
     public final static String BASE_URL = "https://www.booking.com";
 
     public BasePage(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver, (20));
-    }
+      this.driver = driver;
 
-    public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().window().maximize(); //открывает браузер в полном окне
-    }
+   }
 }
