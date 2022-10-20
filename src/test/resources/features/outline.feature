@@ -7,5 +7,6 @@ Feature: Search on booking.com
     And hotel rating is <rating>
 Examples:
     |city|hotel|rating|
-    |"Dubai"|"IntercityHotel Dubai Jaddaf Waterfront"|"8.0"|
+    |"Dubai"|"MD Hotel By Gewan formerly Cassells"|"7.6"|
+    |"Dubai"|"IntercityHotel Dubai Jaddaf Waterfront"|"7.9"|
     |"Minsk"|"Another hotel name"|"9.0"|
